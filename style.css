@@ -5,31 +5,31 @@ body, html {
 }
 
 body {
-    background-image: url('img/landingPage.png'); /* Reemplaza con la ruta de tu imagen de fondo */
+    background-image: url('img/landingPage.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
 }
 
 .contenedor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: 100%; 
     height: 100%;
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenedor de botones */
-    align-items: flex-end; /* Alinea los botones en la parte inferior */
-    padding-bottom: 100px; /* Ajusta el espacio desde la parte inferior */
-    box-sizing: border-box;
+    justify-content: flex-end; 
+    align-items: flex-start; 
+    padding: 20px; 
+    box-sizing: border-box; 
     pointer-events: none;
 }
 
 .botones-redes {
-    display: flex;
-    gap: 150px; /* Espacio inicial entre los botones - AJUSTAR SEGÚN LA DISTANCIA DE LOS CÍRCULOS */
-    pointer-events: auto;
-    transform: translateX(-50%); /* Intenta centrar el grupo de botones */
+    display: flex; 
+    gap: 25px; 
+    pointer-events: auto; 
 }
 
 .botones-redes a {
@@ -44,22 +44,25 @@ body {
 
 .icono-red-social {
     display: block;
-    width: 60px; /* Tamaño inicial de los iconos - AJUSTAR */
-    height: 60px; /* Tamaño inicial de los iconos - AJUSTAR */
+    width: 50px; 
+    height: 50px;
 }
 
-/* Ajustes para pantallas más pequeñas */
 @media (max-width: 600px) {
     .contenedor {
-        padding-bottom: 60px;
+        padding: 15px;
+        justify-content: center; 
+        align-items: flex-end;
+        flex-direction: column; 
     }
 
     .botones-redes {
-        gap: 50px; /* Reduce el espacio entre botones en móviles */
+        flex-direction: row;
+        gap: 10px;
     }
 
     .icono-red-social {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
 }
